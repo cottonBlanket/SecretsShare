@@ -1,7 +1,8 @@
-﻿namespace Secret_Share.Models
+﻿namespace SecretsShare.Models
 {
     public class AuthModel
     {
-        
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }

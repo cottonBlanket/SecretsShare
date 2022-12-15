@@ -1,7 +1,7 @@
 ﻿using System;
-using Secret_Share.HelperObject;
+using SecretsShare.HelperObject;
 
-namespace Secret_Share.DTO
+namespace SecretsShare.DTO
 {
     public class File: BaseDto
     {

@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Secret_Share.DTO;
+using SecretsShare.DTO;
 
-namespace Secret_Share
+namespace SecretsShare
 {
     public class DataContext: DbContext
     {

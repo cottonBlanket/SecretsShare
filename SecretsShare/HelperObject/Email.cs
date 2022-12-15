@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace Secret_Share.HelperObject
+namespace SecretsShare.HelperObject
 {
     public class Email
     {

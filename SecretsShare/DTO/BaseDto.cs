@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace Secret_Share.DTO
+namespace SecretsShare.DTO
 {
     public class BaseDto
     {
-        private Guid Id { get; set; }
+        public Guid Id { get; set; }
     }
 }

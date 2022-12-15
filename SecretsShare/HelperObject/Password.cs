@@ -1,4 +1,4 @@
-﻿namespace Secret_Share.HelperObject
+﻿namespace SecretsShare.HelperObject
 {
     public class Password
     {
