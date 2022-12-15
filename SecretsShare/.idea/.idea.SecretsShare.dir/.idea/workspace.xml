@@ -5,8 +5,17 @@
     <projectFile profileName="SecretsShare">SecretsShare.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="added basic repositories and user repositories">
+    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="ProfilingFiles">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Managers/Managers/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/Managers/UserManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretsShare.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SecretsShare.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/SecretsShare.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/SecretsShare.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671134069966</updated>
-      <workItem from="1671134079774" duration="2828000" />
+      <workItem from="1671134079774" duration="3867000" />
     </task>
     <task id="LOCAL-00001" summary="Starting project structure">
       <created>1671134293006</created>
@@ -119,7 +128,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671136649662</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added mapping files, filled in for the user">
+      <created>1671137192544</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671137192544</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ProfilingFiles">
+      <created>1671137214013</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671137214013</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +169,8 @@
     <MESSAGE value="Added user service files" />
     <MESSAGE value="Added file maintenance files" />
     <MESSAGE value="added basic repositories and user repositories" />
-    <option name="LAST_COMMIT_MESSAGE" value="added basic repositories and user repositories" />
+    <MESSAGE value="Added mapping files, filled in for the user" />
+    <MESSAGE value="ProfilingFiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="ProfilingFiles" />
   </component>
 </project>
