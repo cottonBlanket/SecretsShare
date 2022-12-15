@@ -4,10 +4,18 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using Microsoft.OpenApi.Models;
+using SecretsShare.Managers.Managers;
+using SecretsShare.Managers.ManagersInterfaces;
+using SecretsShare.Profiles;
+using SecretsShare.Repositories.Interfaces;
+using SecretsShare.Repositories.Repositories;
 
 namespace SecretsShare
 {
@@ -24,6 +32,23 @@ namespace SecretsShare
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddDbContext<DataContext>(opt => 
+                opt.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IUserManager, UserManager>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile<UserProfile>();
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+            services.AddSwaggerGen(c => 
+                c.SwaggerDoc("v1", new OpenApiInfo()
+                {
+                    Title = "SecretsShare",
+                    Version = "v1"
+                }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,6 +57,8 @@ namespace SecretsShare
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
             else
             {
@@ -41,15 +68,15 @@ namespace SecretsShare
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            //app.UseStaticFiles();
 
-            app.UseRouting();
+            //app.UseRouting();
 
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }

@@ -32,7 +32,7 @@ namespace SecretsShare.Managers.Managers
         {
             var user = _userRepository
                 .GetAll()
-                .FirstOrDefault(x => x.Email.Value == model.Email && x.Password.Value == model.Password);
+                .FirstOrDefault(x => x.Email == model.Email && x.Password == model.Password);
 
             if (user == null)
             {
@@ -55,8 +55,8 @@ namespace SecretsShare.Managers.Managers
             
             var response = Authenticate(new AuthModel
             {
-                Email = userModel.Email.Value,
-                Password = userModel.Password.Value
+                Email = userModel.Email,
+                Password = userModel.Password
             });
             
             return response;

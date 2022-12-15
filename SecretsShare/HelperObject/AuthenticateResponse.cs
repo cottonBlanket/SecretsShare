@@ -13,7 +13,7 @@ namespace SecretsShare.HelperObject
         public AuthenticateResponse(User user, string token, string refreshToken)
         {
             Id = user.Id;
-            Email = user.Email.Value;
+            Email = user.Email;
             AccessToken = token;
             RefreshToken = refreshToken;
         }
