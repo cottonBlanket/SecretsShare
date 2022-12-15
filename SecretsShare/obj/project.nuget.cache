@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6d0zeTCy2yIMLp/G1Nrag1UX9v+MhDW48glwMGmFNdI2Q928DqdHxLFsPFMMMEfEsKTSFS467W5eIu2I7DwhEA==",
+  "dgSpecHash": "RkdTH0fW6UMGpT5tmTsv9x5u9VUrP9O0DUaLOiL8cPX/igL41g6zrQFui56UScFs9t06yWYP1lMyia0BAthFQw==",
   "success": true,
   "projectFilePath": "C:\\Users\\danil\\Documents\\GitHub\\SecretsShare\\SecretsShare\\SecretsShare.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\danil\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\danil\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\danil\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.11\\microsoft.entityframeworkcore.5.0.11.nupkg.sha512",
     "C:\\Users\\danil\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.11\\microsoft.entityframeworkcore.abstractions.5.0.11.nupkg.sha512",
     "C:\\Users\\danil\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.11\\microsoft.entityframeworkcore.analyzers.5.0.11.nupkg.sha512",
