@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using SecretsShare.HelperObject;
 using SecretsShare.Managers.ManagersInterfaces;
 
@@ -11,7 +12,7 @@ namespace SecretsShare.Managers.Managers
             throw new System.NotImplementedException();
         }
 
-        public Task<string> DownloadFile()
+        public Task<Uri> DownloadFile()
         {
             throw new System.NotImplementedException();
         }
@@ -21,7 +22,7 @@ namespace SecretsShare.Managers.Managers
             throw new System.NotImplementedException();
         }
 
-        public Task<string> ViewTextFile()
+        public Task<Uri> ViewTextFile()
         {
             throw new System.NotImplementedException();
         }
