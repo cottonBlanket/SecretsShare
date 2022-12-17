@@ -31,7 +31,6 @@ namespace SecretsShare
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
             services.AddDbContext<DataContext>(opt => 
                 opt.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IUserManager, UserManager>();
@@ -43,6 +42,7 @@ namespace SecretsShare
 
             IMapper mapper = mapperConfig.CreateMapper();
             services.AddSingleton(mapper);
+            services.AddControllers();
             services.AddSwaggerGen(c => 
                 c.SwaggerDoc("v1", new OpenApiInfo()
                 {
@@ -58,7 +58,7 @@ namespace SecretsShare
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApi v1"));
             }
             else
             {
@@ -70,7 +70,7 @@ namespace SecretsShare
             app.UseHttpsRedirection();
             //app.UseStaticFiles();
 
-            //app.UseRouting();
+            app.UseRouting();
 
             app.UseAuthorization();
 
