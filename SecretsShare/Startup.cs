@@ -35,9 +35,12 @@ namespace SecretsShare
                 opt.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IUserManager, UserManager>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IFilesManager, FilesManager>();
+            services.AddScoped<IFilesRepository, FilesRepository>();
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile<UserProfile>();
+                mc.AddProfile<FileProfile>();
             });
 
             IMapper mapper = mapperConfig.CreateMapper();
