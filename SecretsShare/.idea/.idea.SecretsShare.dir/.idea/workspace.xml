@@ -5,12 +5,9 @@
     <projectFile profileName="SecretsShare">SecretsShare.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="Added the ability to download a file by uri, and then delete it if necessary">
+    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="Added the ability to download a text file">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/FilesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/FilesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Managers/Managers/FilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/Managers/FilesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/ManagersInterfaces/IFilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/ManagersInterfaces/IFilesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/UploadModels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/UploadModels.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.dll" afterDir="false" />
@@ -19,8 +16,6 @@
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/SecretsShare.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/refint/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/refint/SecretsShare.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +25,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2499c1873f584d02976265b79bf3f7a11bbf90/bb/4d9ecfeb/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f572a3da9741413e354aa7410d360b6e3b03df99098df54d41d482cdfff67b8/DbContextOptionsBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/87c8f0a2b3113ed8ac865048fe1e32205e9f44b1be45f83f62fe6fdd443dcb3/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Controllers/FilesController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -93,7 +90,7 @@
       <workItem from="1671134079774" duration="5482000" />
       <workItem from="1671307139113" duration="5055000" />
       <workItem from="1671350557604" duration="2038000" />
-      <workItem from="1671416184263" duration="3905000" />
+      <workItem from="1671416184263" duration="7246000" />
     </task>
     <task id="LOCAL-00001" summary="Starting project structure">
       <created>1671134293006</created>
@@ -165,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671418004707</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added the ability to download a text file">
+      <created>1671420424495</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671420424495</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +200,8 @@
     <MESSAGE value="ProfilingFiles" />
     <MESSAGE value="Added logic for registering and authorizing a user using a jwt token" />
     <MESSAGE value="Added the ability to download a file by uri, and then delete it if necessary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the ability to download a file by uri, and then delete it if necessary" />
+    <MESSAGE value="Added the ability to download a text file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the ability to download a text file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -206,10 +211,10 @@
           <line>33</line>
           <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Managers\Managers\FilesManager.cs" initialLine="32" containingFunctionPresentation="method 'UploadFile'">
             <startOffsets>
-              <option value="1144" />
+              <option value="1133" />
             </startOffsets>
             <endOffsets>
-              <option value="1214" />
+              <option value="1203" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
@@ -219,36 +224,36 @@
           <line>40</line>
           <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Managers\Managers\FilesManager.cs" initialLine="40" containingFunctionPresentation="method 'UploadFile'">
             <startOffsets>
-              <option value="1427" />
+              <option value="1416" />
             </startOffsets>
             <endOffsets>
-              <option value="1460" />
+              <option value="1449" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Managers/Managers/FilesManager.cs</url>
-          <line>49</line>
+          <line>50</line>
           <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Managers\Managers\FilesManager.cs" initialLine="49" containingFunctionPresentation="method 'UploadTextFile'">
             <startOffsets>
-              <option value="1817" />
+              <option value="1828" />
             </startOffsets>
             <endOffsets>
-              <option value="1887" />
+              <option value="1886" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Managers/Managers/FilesManager.cs</url>
-          <line>54</line>
+          <line>55</line>
           <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Managers\Managers\FilesManager.cs" initialLine="54" containingFunctionPresentation="method 'UploadTextFile'">
             <startOffsets>
-              <option value="2071" />
+              <option value="2070" />
             </startOffsets>
             <endOffsets>
-              <option value="2072" />
+              <option value="2071" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
@@ -278,6 +283,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Managers/Managers/FilesManager.cs</url>
+          <line>52</line>
+          <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Managers\Managers\FilesManager.cs" initialLine="52" containingFunctionPresentation="method 'UploadTextFile'">
+            <startOffsets>
+              <option value="1948" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1995" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

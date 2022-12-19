@@ -45,16 +45,16 @@ namespace SecretsShare.Managers.Managers
         public async Task<string> UploadTextFile(UploadFileModel model, UploadTextModel text)
         {
             var fileEntity = _mapper.Map<File>(model);
-            var fileInfo = new FileInfo($"..\\Files\\TextFile\\{Guid.NewGuid()}.txt");
+            var unique = Guid.NewGuid();
+            var fileInfo = new FileInfo($"..\\Files\\TextFile\\{unique}.txt");
             fileEntity.Name = text.Name;
-            fileEntity.Uri = $"https://SecretsShare/File/id={text.GetHashCode()}";
+            fileEntity.Uri = $"https://SecretsShare/File/id={unique}";
             fileEntity.Path = fileInfo.FullName;
             using (StreamWriter sw = fileInfo.CreateText())
             {
                 await sw.WriteAsync(text.Text);
             }
 
-            fileInfo.CopyTo(fileEntity.Path);
             var id = await _filesRepository.Add(fileEntity);
             return fileEntity.Uri;
         }
