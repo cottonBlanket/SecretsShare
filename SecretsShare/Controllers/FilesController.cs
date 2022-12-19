@@ -66,9 +66,12 @@ namespace SecretsShare.Controllers
         }
         
         [HttpGet("downloadText")]
-        public FileStreamResult ViewTextFile([FromQuery]Guid userId, [FromQuery]Uri uri)
+        public IActionResult ViewTextFile([FromQuery]string uri)
         {
-            throw new NotImplementedException();
+            var file = _filesManager.ViewTextFile(uri);
+            if (file is null)
+                return NoContent();
+            return Ok(file);
         }
     }
 }

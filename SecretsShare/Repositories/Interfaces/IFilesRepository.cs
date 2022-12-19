@@ -11,5 +11,6 @@ namespace SecretsShare.Repositories.Interfaces
     {
         public List<File> GetAllUserFiles(Guid userId);
         public void OnCascadeDelete(File file);
+        public File GetByUrlOrDefault(string uri);
     }
 }

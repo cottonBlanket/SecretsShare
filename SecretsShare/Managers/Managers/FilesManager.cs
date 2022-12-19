@@ -59,15 +59,28 @@ namespace SecretsShare.Managers.Managers
             return fileEntity.Uri;
         }
 
-        public Task<Uri> ViewTextFile()
+        public TextFileResponse ViewTextFile(string uri)
         {
-            throw new System.NotImplementedException();
+            var file = _filesRepository.GetByUrlOrDefault(uri);
+            if (file is null)
+                return null;
+            if(file.Cascade)
+                _filesRepository.OnCascadeDelete(file);
+            using (StreamReader reader = new StreamReader(file.Path))
+            {
+                var fileResponse = new TextFileResponse()
+                {
+                    Name = file.Name,
+                    Text = reader.ReadToEnd()
+                };
+                return fileResponse;
+            }
         }
 
         public File DownLoadFile(string uri)
         {
             //обработать исключение с noconntent
-            var file = _filesRepository.GetAll().FirstOrDefault(x => x.Uri == uri);
+            var file = _filesRepository.GetByUrlOrDefault(uri);
             if (file is null)
                 return null;
             if(file.Cascade)

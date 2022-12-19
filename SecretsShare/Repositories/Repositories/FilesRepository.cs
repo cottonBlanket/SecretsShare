@@ -11,7 +11,6 @@ namespace SecretsShare.Repositories.Repositories
     public class FilesRepository: IFilesRepository
     {
         private readonly DataContext _context;
-        private IFilesRepository _filesRepositoryImplementation;
 
         public FilesRepository(DataContext context)
         {
@@ -50,5 +49,7 @@ namespace SecretsShare.Repositories.Repositories
         {
             _context.Set<File>().Remove(file);
         }
+
+        public File GetByUrlOrDefault(string uri) => _context.Files.FirstOrDefault(f => f.Uri == uri);
     }
 }
