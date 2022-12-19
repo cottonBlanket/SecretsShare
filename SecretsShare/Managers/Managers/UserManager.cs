@@ -52,7 +52,7 @@ namespace SecretsShare.Managers.Managers
         {
             var userModel = _mapper.Map<User>(model);
             userModel.RefreshToken = GenerateJwtToken(userModel);
-            var addedUser = await _userRepository.Add(userModel);
+            var addedUser = await _userRepository.AddAsync(userModel);
             
             var response = Authenticate(new AuthModel
             {

@@ -38,7 +38,7 @@ namespace SecretsShare.Managers.Managers
                 file.CopyTo(fileStream);
             }
     
-            var id = await _filesRepository.Add(fileEntity);
+            var id = await _filesRepository.AddAsync(fileEntity);
             return fileEntity.Uri;
         }
 
@@ -55,7 +55,7 @@ namespace SecretsShare.Managers.Managers
                 await sw.WriteAsync(text.Text);
             }
 
-            var id = await _filesRepository.Add(fileEntity);
+            var id = await _filesRepository.AddAsync(fileEntity);
             return fileEntity.Uri;
         }
 
@@ -93,6 +93,16 @@ namespace SecretsShare.Managers.Managers
             }
                 
             return file;
+        }
+
+        public async Task<SuccessResponse> UpdateCascade(string uri)
+        {
+            var file = _filesRepository.GetByUrlOrDefault(uri);
+            if (file is null)
+                return new SuccessResponse(false);
+            file.Cascade = !file.Cascade;
+            var id = await _filesRepository.UpdateAsync(file);
+            return new SuccessResponse(file.Id == id);
         }
     }
 }

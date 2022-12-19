@@ -73,5 +73,14 @@ namespace SecretsShare.Controllers
                 return NoContent();
             return Ok(file);
         }
+
+        [HttpPut("update")]
+        public async Task<IActionResult> UpdateFileCascadeDelete(string uri)
+        {
+            var response = await _filesManager.UpdateCascade(uri);
+            if (response.Success)
+                return Ok();
+            return BadRequest();
+        }
     }
 }

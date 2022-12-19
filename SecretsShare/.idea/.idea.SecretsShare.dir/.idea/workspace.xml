@@ -5,33 +5,15 @@
     <projectFile profileName="SecretsShare">SecretsShare.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="Added a token update after the expiration date">
+    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="Fixed file deletion">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/FilesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/FilesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/Managers/FilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/Managers/FilesManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Managers/Managers/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/Managers/UserManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/ManagersInterfaces/IUserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/ManagersInterfaces/IUserManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/UploadModels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/UploadModels.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/Interfaces/IFilesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Interfaces/IFilesRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Interfaces/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/ManagersInterfaces/IFilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/ManagersInterfaces/IFilesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/Interfaces/IEfRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Interfaces/IEfRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repositories/Repositories/FilesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Repositories/FilesRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repositories/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Repositories/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SecretsShare.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SecretsShare.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/SecretsShare.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/refint/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/refint/SecretsShare.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/SecretsShare.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/SecretsShare.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +26,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/87c8f0a2b3113ed8ac865048fe1e32205e9f44b1be45f83f62fe6fdd443dcb3/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Controllers/FilesController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Controllers/FilesController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Managers/Managers/FilesManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Managers/Managers/FilesManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Managers/ManagersInterfaces/IUserManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
@@ -109,7 +92,7 @@
       <workItem from="1671134079774" duration="5482000" />
       <workItem from="1671307139113" duration="5055000" />
       <workItem from="1671350557604" duration="2038000" />
-      <workItem from="1671416184263" duration="10654000" />
+      <workItem from="1671416184263" duration="11415000" />
     </task>
     <task id="LOCAL-00001" summary="Starting project structure">
       <created>1671134293006</created>
@@ -209,7 +192,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671435268190</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added the ability to retrieve all user files">
+      <created>1671436547077</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1671436547077</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Fixed file deletion">
+      <created>1671436732553</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1671436732553</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +241,9 @@
     <MESSAGE value="Fixed a bug with loading a text file" />
     <MESSAGE value="Added the ability to view a text file" />
     <MESSAGE value="Added a token update after the expiration date" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a token update after the expiration date" />
+    <MESSAGE value="Added the ability to retrieve all user files" />
+    <MESSAGE value="Fixed file deletion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed file deletion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -270,7 +269,7 @@
               <option value="1416" />
             </startOffsets>
             <endOffsets>
-              <option value="1449" />
+              <option value="1454" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
@@ -280,10 +279,10 @@
           <line>50</line>
           <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Managers\Managers\FilesManager.cs" initialLine="49" containingFunctionPresentation="method 'UploadTextFile'">
             <startOffsets>
-              <option value="1828" />
+              <option value="1833" />
             </startOffsets>
             <endOffsets>
-              <option value="1886" />
+              <option value="1891" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
@@ -293,10 +292,10 @@
           <line>55</line>
           <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Managers\Managers\FilesManager.cs" initialLine="54" containingFunctionPresentation="method 'UploadTextFile'">
             <startOffsets>
-              <option value="2070" />
+              <option value="2075" />
             </startOffsets>
             <endOffsets>
-              <option value="2071" />
+              <option value="2076" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
@@ -332,10 +331,10 @@
           <line>52</line>
           <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Managers\Managers\FilesManager.cs" initialLine="52" containingFunctionPresentation="method 'UploadTextFile'">
             <startOffsets>
-              <option value="1948" />
+              <option value="1953" />
             </startOffsets>
             <endOffsets>
-              <option value="1995" />
+              <option value="2000" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />

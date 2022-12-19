@@ -9,7 +9,7 @@ namespace SecretsShare.Repositories.Interfaces
     {
     List<T> GetAll();
     T GetById(Guid id);
-    Task<Guid> Add(T entity);
-    Task<Guid> Update(T entity);
+    Task<Guid> AddAsync(T entity);
+    Task<Guid> UpdateAsync(T entity);
     }
 }

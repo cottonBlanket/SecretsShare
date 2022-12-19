@@ -21,7 +21,7 @@ namespace SecretsShare.Repositories.Repositories
 
         public File GetById(Guid id) => _context.Set<File>().FirstOrDefault(f => f.Id == id);
 
-        public async Task<Guid> Add(File file)
+        public async Task<Guid> AddAsync(File file)
         {
             if (_context.Users.Any(x => x.Id == file.UserId))
             {
@@ -33,7 +33,7 @@ namespace SecretsShare.Repositories.Repositories
             throw new Exception("User not found");
         }
 
-        public async Task<Guid> Update(File entity)
+        public async Task<Guid> UpdateAsync(File entity)
         {
             _context.Files.Update(entity);
             await _context.SaveChangesAsync();

@@ -22,14 +22,14 @@ namespace SecretsShare.Repositories.Repositories
 
         public User GetById(Guid id) => _context.Users.FirstOrDefault(u => u.Id == id);
 
-        public async Task<Guid> Add(User user)
+        public async Task<Guid> AddAsync(User user)
         {
             var result = await _context.Set<User>().AddAsync(user);
             await _context.SaveChangesAsync();
             return result.Entity.Id;
         }
 
-        public async Task<Guid> Update(User entity)
+        public async Task<Guid> UpdateAsync(User entity)
         {
             _context.Users.Update(entity);
             await _context.SaveChangesAsync();
