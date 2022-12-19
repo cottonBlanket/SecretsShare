@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SecretsShare.Models;
@@ -60,6 +62,15 @@ namespace SecretsShare.Controllers
             {
                 return NoContent();
             }
+        }
+
+        [HttpGet("getAll")]
+        public IActionResult GetAllMyFiles([FromQuery] Guid userId)
+        {
+            var files = _userManager.GetAllUserFiles(userId);
+            if (files.Any())
+                return Ok(files);
+            return NoContent();
         }
     }
 }

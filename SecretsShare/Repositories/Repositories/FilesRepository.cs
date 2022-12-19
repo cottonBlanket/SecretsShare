@@ -40,11 +40,6 @@ namespace SecretsShare.Repositories.Repositories
             return entity.Id;
         }
 
-        public List<File> GetAllUserFiles(Guid userId)
-        {
-            return _context.Set<File>().Where(f => f.UserId == userId).ToList();
-        }
-
         public void OnCascadeDelete(File file)
         {
             _context.Set<File>().Remove(file);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using SecretsShare.Managers.ManagersInterfaces;
@@ -86,6 +87,12 @@ namespace SecretsShare.Managers.Managers
             var response = new AuthenticateResponse(user, GenerateJwtToken(user), refreshToken);
             var result = await _userRepository.UpdateRefreshToken(user, refreshToken);
             return response;
+        }
+
+        public List<File> GetAllUserFiles(Guid userId)
+        {
+            var files = _userRepository.GetAllUserFiles(userId);
+            return files;
         }
     }
 }

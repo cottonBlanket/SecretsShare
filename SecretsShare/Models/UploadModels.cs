@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace SecretsShare.Models
 {
     public class UploadFileModel
     {
-        [JsonIgnore]
-        public Guid Id { get; set; }
         public Guid UserId { get; set; }
         public bool Cascade { get; set; }
         

@@ -5,12 +5,33 @@
     <projectFile profileName="SecretsShare">SecretsShare.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="Added the ability to view a text file">
+    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="Added a token update after the expiration date">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Managers/Managers/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/Managers/UserManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Managers/ManagersInterfaces/IUserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/ManagersInterfaces/IUserManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/UploadModels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/UploadModels.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/Interfaces/IFilesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Interfaces/IFilesRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Interfaces/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/Repositories/FilesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Repositories/FilesRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repositories/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Repositories/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SecretsShare.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SecretsShare.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/SecretsShare.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/refint/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/refint/SecretsShare.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/SecretsShare.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/SecretsShare.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +45,7 @@
     <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Controllers/FilesController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Controllers/FilesController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Managers/Managers/FilesManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Managers/ManagersInterfaces/IUserManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -87,7 +109,7 @@
       <workItem from="1671134079774" duration="5482000" />
       <workItem from="1671307139113" duration="5055000" />
       <workItem from="1671350557604" duration="2038000" />
-      <workItem from="1671416184263" duration="9428000" />
+      <workItem from="1671416184263" duration="10654000" />
     </task>
     <task id="LOCAL-00001" summary="Starting project structure">
       <created>1671134293006</created>
@@ -180,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671434279140</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added a token update after the expiration date">
+      <created>1671435268190</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671435268190</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +243,8 @@
     <MESSAGE value="Added the ability to download a text file" />
     <MESSAGE value="Fixed a bug with loading a text file" />
     <MESSAGE value="Added the ability to view a text file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the ability to view a text file" />
+    <MESSAGE value="Added a token update after the expiration date" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a token update after the expiration date" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -42,5 +42,10 @@ namespace SecretsShare.Repositories.Repositories
             await _context.SaveChangesAsync();
             return user.Id;
         }
+        
+        public List<File> GetAllUserFiles(Guid userId)
+        {
+            return _context.Set<File>().Where(f => f.UserId == userId).ToList();
+        }
     }
 }
