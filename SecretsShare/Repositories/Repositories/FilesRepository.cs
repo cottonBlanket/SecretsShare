@@ -46,5 +46,10 @@ namespace SecretsShare.Repositories.Repositories
         }
 
         public File GetByUrlOrDefault(string uri) => _context.Files.FirstOrDefault(f => f.Uri == uri);
+        
+        public void DeleteFile(File file)
+        {
+            _context.Files.Remove(file);
+        }
     }
 }

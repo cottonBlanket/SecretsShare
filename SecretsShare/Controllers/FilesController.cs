@@ -82,5 +82,14 @@ namespace SecretsShare.Controllers
                 return Ok();
             return BadRequest();
         }
+        
+        [HttpDelete]
+        public IActionResult DeleteFile(string uri)
+        {
+            var response = _filesManager.DeleteFile(uri);
+            if (response.Success)
+                return Ok();
+            return BadRequest();
+        }
     }
 }

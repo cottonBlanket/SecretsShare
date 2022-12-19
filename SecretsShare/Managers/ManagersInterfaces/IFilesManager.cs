@@ -14,5 +14,6 @@ namespace SecretsShare.Managers.ManagersInterfaces
         public TextFileResponse ViewTextFile(string uri);
         public File DownLoadFile(string uri);
         public Task<SuccessResponse> UpdateCascade(string uri);
+        public SuccessResponse DeleteFile(string uri);
     }
 }

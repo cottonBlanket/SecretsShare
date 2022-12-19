@@ -11,5 +11,6 @@ namespace SecretsShare.Repositories.Interfaces
     {
         public void OnCascadeDelete(File file);
         public File GetByUrlOrDefault(string uri);
+        public void DeleteFile(File file);
     }
 }

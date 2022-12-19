@@ -104,5 +104,15 @@ namespace SecretsShare.Managers.Managers
             var id = await _filesRepository.UpdateAsync(file);
             return new SuccessResponse(file.Id == id);
         }
+
+        public SuccessResponse DeleteFile(string uri)
+        {
+            var file = _filesRepository.GetByUrlOrDefault(uri);
+            if (file is null)
+                return new SuccessResponse(false);
+            _filesRepository.DeleteFile(file);
+            System.IO.File.Delete(file.Path);
+            return new SuccessResponse(true);
+        }
     }
 }

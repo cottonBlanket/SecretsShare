@@ -5,15 +5,12 @@
     <projectFile profileName="SecretsShare">SecretsShare.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="Fixed file deletion">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="Added the ability to change cascading deletion for a file">
       <change beforePath="$PROJECT_DIR$/Controllers/FilesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/FilesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Managers/Managers/FilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/Managers/FilesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/Managers/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/Managers/UserManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Managers/ManagersInterfaces/IFilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/ManagersInterfaces/IFilesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/Interfaces/IEfRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Interfaces/IEfRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/Interfaces/IFilesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Interfaces/IFilesRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repositories/Repositories/FilesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Repositories/FilesRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Repositories/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Repositories/UserRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +21,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2499c1873f584d02976265b79bf3f7a11bbf90/bb/4d9ecfeb/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f572a3da9741413e354aa7410d360b6e3b03df99098df54d41d482cdfff67b8/DbContextOptionsBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/87c8f0a2b3113ed8ac865048fe1e32205e9f44b1be45f83f62fe6fdd443dcb3/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Controllers/FilesController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Controllers/FilesController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Controllers/FilesController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Managers/Managers/FilesManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -92,7 +90,7 @@
       <workItem from="1671134079774" duration="5482000" />
       <workItem from="1671307139113" duration="5055000" />
       <workItem from="1671350557604" duration="2038000" />
-      <workItem from="1671416184263" duration="11415000" />
+      <workItem from="1671416184263" duration="11963000" />
     </task>
     <task id="LOCAL-00001" summary="Starting project structure">
       <created>1671134293006</created>
@@ -206,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671436732553</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added the ability to change cascading deletion for a file">
+      <created>1671437285713</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1671437285713</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +248,8 @@
     <MESSAGE value="Added a token update after the expiration date" />
     <MESSAGE value="Added the ability to retrieve all user files" />
     <MESSAGE value="Fixed file deletion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed file deletion" />
+    <MESSAGE value="Added the ability to change cascading deletion for a file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the ability to change cascading deletion for a file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
