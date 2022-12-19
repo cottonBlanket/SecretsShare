@@ -12,4 +12,10 @@ namespace SecretsShare.Models
         
         public string FileType { get; set; }
     }
+
+    public class UploadTextModel
+    {
+        public string Name { get; set; }
+        public string Text { get; set; }
+    }
 }

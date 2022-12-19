@@ -59,9 +59,9 @@ namespace SecretsShare.Controllers
         }
         
         [HttpPost("uploadText")]
-        public IActionResult UploadText([FromQuery] UploadFileModel model, [FromBody] string text)
+        public async Task<IActionResult> UploadText([FromQuery] UploadFileModel model, [FromBody] UploadTextModel text)
         {
-            var uri = _filesManager.UploadTextFile(model, text);
+            var uri = await _filesManager.UploadTextFile(model, text);
             return Ok(uri);//uri
         }
         

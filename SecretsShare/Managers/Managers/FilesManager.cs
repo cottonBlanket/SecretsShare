@@ -29,7 +29,7 @@ namespace SecretsShare.Managers.Managers
         public async Task<string> UploadFileAsync(UploadFileModel model, IFormFile file)
         {
             var fileEntity = _mapper.Map<File>(model);
-            var path = $"..\\Files\\File\\{fileEntity.GetType().GUID}.{file.FileName.Split('.').Last()}";
+            var path = $"..\\Files\\File\\{Guid.NewGuid()}.{file.FileName.Split('.').Last()}";
             fileEntity.Name = file.FileName;
             fileEntity.Uri = $"https://SecretsShare/File/id={file.GetHashCode()}";
             fileEntity.Path = path;
@@ -42,15 +42,21 @@ namespace SecretsShare.Managers.Managers
             return fileEntity.Uri;
         }
 
-        public Task<FileStream> DownloadFile(string uri)
+        public async Task<string> UploadTextFile(UploadFileModel model, UploadTextModel text)
         {
-            throw new NotImplementedException();
-        }
+            var fileEntity = _mapper.Map<File>(model);
+            var fileInfo = new FileInfo($"..\\Files\\TextFile\\{Guid.NewGuid()}.txt");
+            fileEntity.Name = text.Name;
+            fileEntity.Uri = $"https://SecretsShare/File/id={text.GetHashCode()}";
+            fileEntity.Path = fileInfo.FullName;
+            using (StreamWriter sw = fileInfo.CreateText())
+            {
+                await sw.WriteAsync(text.Text);
+            }
 
-        public Uri UploadTextFile(UploadFileModel model, string text)
-        {
-            throw new NotImplementedException();
-            //var path = new FileInfo($"..\\Files\\File\\{model.}");
+            fileInfo.CopyTo(fileEntity.Path);
+            var id = await _filesRepository.Add(fileEntity);
+            return fileEntity.Uri;
         }
 
         public Task<Uri> ViewTextFile()

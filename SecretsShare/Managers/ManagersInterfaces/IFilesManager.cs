@@ -10,7 +10,7 @@ namespace SecretsShare.Managers.ManagersInterfaces
     public interface IFilesManager
     {
         public Task<string> UploadFileAsync(UploadFileModel model, IFormFile file);
-        public Uri UploadTextFile(UploadFileModel model, string text);
+        public Task<string> UploadTextFile(UploadFileModel model, UploadTextModel text);
         public Task<Uri> ViewTextFile();
         public File DownLoadFile(string uri);
     }
