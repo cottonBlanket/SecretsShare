@@ -38,7 +38,6 @@ namespace SecretsShare.Repositories.Repositories
 
         public async Task<Guid> UpdateRefreshToken(User user, string refreshToken)
         {
-            var result = _context.Set<User>().FirstOrDefault(x => x.Id == user.Id);
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
             return user.Id;

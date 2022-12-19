@@ -77,11 +77,14 @@ namespace SecretsShare.Managers.Managers
             return tokenHandler.WriteToken(token);
         }
 
-        public AuthenticateResponse UpdateTokens(User entity, string refreshToken)
+        public async Task<AuthenticateResponse> UpdateTokensAsync(Guid userId, string refreshToken)
         {
-            entity.RefreshToken = GenerateJwtToken(entity);
-            var response = new AuthenticateResponse(entity, GenerateJwtToken(entity), refreshToken);
-            var result = _userRepository.UpdateRefreshToken(entity, refreshToken);
+            var user = _userRepository.GetById(userId);
+            if (user == null)
+                throw new Exception("UserNotFound");
+            user.RefreshToken = GenerateJwtToken(user);
+            var response = new AuthenticateResponse(user, GenerateJwtToken(user), refreshToken);
+            var result = await _userRepository.UpdateRefreshToken(user, refreshToken);
             return response;
         }
     }

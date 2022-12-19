@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SecretsShare.Models;
 using SecretsShare.Managers.ManagersInterfaces;
@@ -41,6 +42,24 @@ namespace SecretsShare.Controllers
             }
 
             return Ok(response);
+        }
+        
+        [HttpPut("refresh")]
+        public async Task<IActionResult> UpdateRefreshToken([FromQuery]Guid userId, [FromQuery]string refreshToken)
+        {
+            try
+            {
+                var response = await _userManager.UpdateTokensAsync(userId, refreshToken);
+                if (response.RefreshToken != refreshToken)
+                {
+                    return BadRequest(new { message = "Token not valid" });
+                }
+                return Ok(response);
+            }
+            catch
+            {
+                return NoContent();
+            }
         }
     }
 }

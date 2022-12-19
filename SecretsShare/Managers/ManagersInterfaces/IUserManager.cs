@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
+using SecretsShare.DTO;
 using SecretsShare.HelperObject;
 using SecretsShare.Models;
 
@@ -8,5 +10,6 @@ namespace SecretsShare.Managers.ManagersInterfaces
     {
         public AuthenticateResponse Authenticate(AuthModel model);
         public Task<AuthenticateResponse> Register(AuthModel userModel);
+        public Task<AuthenticateResponse> UpdateTokensAsync(Guid userId, string refreshToken);
     }
 }
