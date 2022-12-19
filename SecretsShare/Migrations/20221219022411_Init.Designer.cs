@@ -10,7 +10,7 @@ using SecretsShare;
 namespace SecretsShare.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221215215556_Init")]
+    [Migration("20221219022411_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,6 +34,9 @@ namespace SecretsShare.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Path")
                         .HasColumnType("text");
 
                     b.Property<string>("Uri")

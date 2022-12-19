@@ -1,5 +1,8 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
@@ -22,36 +25,48 @@ namespace SecretsShare.Managers.Managers
             _filesRepository = filesRepository;
             _mapper = mapper;
         }
-        
-        public string UploadFile(UploadFileModel model, IFormFile file)
+        //доработать проблему с именами повторяющимися
+        public async Task<string> UploadFileAsync(UploadFileModel model, IFormFile file)
         {
-            var uploadPath = $"..\\Files\\{file.Name}";
             var fileEntity = _mapper.Map<File>(model);
-            fileEntity.Uri = uploadPath;
-            fileEntity.FileType = "File";
-
-            using (var fileStream = new FileStream(uploadPath, FileMode.Create))
+            var path = $"..\\Files\\File\\{fileEntity.GetType().GUID}.{file.FileName.Split('.').Last()}";
+            fileEntity.Name = file.FileName;
+            fileEntity.Uri = $"https://SecretsShare/File/id={file.GetHashCode()}";
+            fileEntity.Path = path;
+            using (var fileStream = new FileStream(path, FileMode.Create))
             {
                 file.CopyTo(fileStream);
             }
     
-            _filesRepository.Add(fileEntity);
+            var id = await _filesRepository.Add(fileEntity);
             return fileEntity.Uri;
         }
 
-        public Task<Uri> DownloadFile()
+        public Task<FileStream> DownloadFile(string uri)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
-        public Uri UploadTextFile()
+        public Uri UploadTextFile(UploadFileModel model, string text)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
+            //var path = new FileInfo($"..\\Files\\File\\{model.}");
         }
 
         public Task<Uri> ViewTextFile()
         {
             throw new System.NotImplementedException();
+        }
+
+        public File DownLoadFile(string uri)
+        {
+            //обработать исключение с noconntent
+            var file = _filesRepository.GetAll().FirstOrDefault(x => x.Uri == uri);
+            if (file is null)
+                return null;
+            if(file.Cascade)
+                _filesRepository.OnCascadeDelete(file);
+            return file;
         }
     }
 }

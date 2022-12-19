@@ -34,6 +34,9 @@ namespace SecretsShare.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
+                    b.Property<string>("Path")
+                        .HasColumnType("text");
+
                     b.Property<string>("Uri")
                         .HasColumnType("text");
 

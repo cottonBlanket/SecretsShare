@@ -7,17 +7,29 @@
   <component name="ChangeListManager">
     <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SecretsShare.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SecretsShare.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/FilesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/FilesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTO/File.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DTO/File.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/Managers/FilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/Managers/FilesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/ManagersInterfaces/IFilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/ManagersInterfaces/IFilesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20221215215556_Init.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20221215215556_Init.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/DataContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/UploadModels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/UploadModels.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Profiles/FileProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Profiles/FileProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Repositories/Repositories/FilesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Repositories/FilesRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/SecretsShare.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/SecretsShare.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/SecretsShare.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/SecretsShare.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/SecretsShare.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/refint/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/refint/SecretsShare.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +37,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2499c1873f584d02976265b79bf3f7a11bbf90/bb/4d9ecfeb/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f572a3da9741413e354aa7410d360b6e3b03df99098df54d41d482cdfff67b8/DbContextOptionsBuilder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/DataContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Models/AuthModel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -39,15 +50,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.SecretsShare">
     <configuration name="SecretsShare" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/SecretsShare.csproj" />
@@ -89,6 +100,9 @@
       <option name="presentableId" value="Default" />
       <updated>1671134069966</updated>
       <workItem from="1671134079774" duration="5482000" />
+      <workItem from="1671307139113" duration="5055000" />
+      <workItem from="1671350557604" duration="2038000" />
+      <workItem from="1671416184263" duration="1717000" />
     </task>
     <task id="LOCAL-00001" summary="Starting project structure">
       <created>1671134293006</created>
@@ -184,5 +198,37 @@
     <MESSAGE value="ProfilingFiles" />
     <MESSAGE value="Added logic for registering and authorizing a user using a jwt token" />
     <option name="LAST_COMMIT_MESSAGE" value="Added logic for registering and authorizing a user using a jwt token" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Managers/Managers/FilesManager.cs</url>
+          <line>33</line>
+          <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Managers\Managers\FilesManager.cs" initialLine="32" containingFunctionPresentation="method 'UploadFile'">
+            <startOffsets>
+              <option value="1144" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1214" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Managers/Managers/FilesManager.cs</url>
+          <line>40</line>
+          <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Managers\Managers\FilesManager.cs" initialLine="40" containingFunctionPresentation="method 'UploadFile'">
+            <startOffsets>
+              <option value="1427" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1460" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -29,6 +29,7 @@ namespace SecretsShare.Migrations
                     UserId = table.Column<Guid>(type: "uuid", nullable: false),
                     Name = table.Column<string>(type: "text", nullable: true),
                     Uri = table.Column<string>(type: "text", nullable: true),
+                    Path = table.Column<string>(type: "text", nullable: true),
                     FileType = table.Column<string>(type: "text", nullable: true),
                     Cascade = table.Column<bool>(type: "boolean", nullable: false)
                 },

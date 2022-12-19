@@ -24,9 +24,14 @@ namespace SecretsShare.Repositories.Repositories
 
         public async Task<Guid> Add(File file)
         {
-            var result = await _context.Set<File>().AddAsync(file);
-            await _context.SaveChangesAsync();
-            return result.Entity.Id;
+            if (_context.Users.Any(x => x.Id == file.UserId))
+            {
+                var result = await _context.Set<File>().AddAsync(file); 
+                await _context.SaveChangesAsync();
+                return result.Entity.Id;
+            }
+
+            throw new Exception("User not found");
         }
 
         public async Task<Guid> Update(File entity)
