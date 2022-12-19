@@ -64,8 +64,11 @@ namespace SecretsShare.Managers.Managers
             var file = _filesRepository.GetByUrlOrDefault(uri);
             if (file is null)
                 return null;
-            if(file.Cascade)
+            if (file.Cascade)
+            {
                 _filesRepository.OnCascadeDelete(file);
+                System.IO.File.Delete(file.Path);
+            }
             using (StreamReader reader = new StreamReader(file.Path))
             {
                 var fileResponse = new TextFileResponse()
@@ -83,8 +86,12 @@ namespace SecretsShare.Managers.Managers
             var file = _filesRepository.GetByUrlOrDefault(uri);
             if (file is null)
                 return null;
-            if(file.Cascade)
+            if (file.Cascade)
+            {
                 _filesRepository.OnCascadeDelete(file);
+                System.IO.File.Delete(file.Path);
+            }
+                
             return file;
         }
     }
