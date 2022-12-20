@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.OpenApi.Models;
 using SecretsShare.Managers.Managers;
 using SecretsShare.Managers.ManagersInterfaces;
@@ -74,6 +75,7 @@ namespace SecretsShare
             //app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseMiddleware<FileDownload>();
 
             app.UseAuthorization();
 

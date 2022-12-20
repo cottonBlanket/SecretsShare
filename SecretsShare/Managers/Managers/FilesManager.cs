@@ -80,10 +80,10 @@ namespace SecretsShare.Managers.Managers
             }
         }
 
-        public File DownLoadFile(string uri)
+        public File GetFile(string id)
         {
             //обработать исключение с noconntent
-            var file = _filesRepository.GetByUrlOrDefault(uri);
+            var file = _filesRepository.GetById(Guid.Parse(id));
             if (file is null)
                 return null;
             if (file.Cascade)

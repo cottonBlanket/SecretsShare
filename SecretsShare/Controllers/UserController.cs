@@ -9,7 +9,7 @@ using SecretsShare.Managers.ManagersInterfaces;
 namespace SecretsShare.Controllers
 {
     [ApiController]
-    [Route("user")]
+    [Route("api/user")]
     public class UserController: ControllerBase
     {
         private readonly IUserManager _userManager;
@@ -64,7 +64,7 @@ namespace SecretsShare.Controllers
             }
         }
 
-        [HttpGet("getAll")]
+        [HttpGet("all")]
         public IActionResult GetAllMyFiles([FromQuery] Guid userId)
         {
             var files = _userManager.GetAllUserFiles(userId);

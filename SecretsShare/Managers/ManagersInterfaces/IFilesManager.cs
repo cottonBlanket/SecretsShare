@@ -12,7 +12,7 @@ namespace SecretsShare.Managers.ManagersInterfaces
         public Task<string> UploadFileAsync(UploadFileModel model, IFormFile file);
         public Task<string> UploadTextFile(UploadFileModel model, UploadTextModel text);
         public TextFileResponse ViewTextFile(string uri);
-        public File DownLoadFile(string uri);
+        public File GetFile(string id);
         public Task<SuccessResponse> UpdateCascade(string uri);
         public SuccessResponse DeleteFile(string uri);
     }
