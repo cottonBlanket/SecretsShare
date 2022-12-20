@@ -9,11 +9,11 @@ namespace SecretsShare.Managers.ManagersInterfaces
 {
     public interface IFilesManager
     {
-        public Task<string> UploadFileAsync(UploadFileModel model, IFormFile file);
-        public Task<string> UploadTextFile(UploadFileModel model, UploadTextModel text);
-        public TextFileResponse ViewTextFile(string uri);
+        public Task<Guid> UploadFileAsync(UploadFileModel model, IFormFile file);
+        public Task<Guid> UploadTextFile(UploadFileModel model, UploadTextModel text);
+        public TextFileResponse ViewTextFile(File file);
         public File GetFile(string id);
-        public Task<SuccessResponse> UpdateCascade(string uri);
-        public SuccessResponse DeleteFile(string uri);
+        public Task<SuccessResponse> UpdateCascade(Guid id);
+        public SuccessResponse DeleteFile(Guid id);
     }
 }

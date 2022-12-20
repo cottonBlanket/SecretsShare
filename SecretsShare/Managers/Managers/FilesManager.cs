@@ -26,12 +26,11 @@ namespace SecretsShare.Managers.Managers
             _mapper = mapper;
         }
         //доработать проблему с именами повторяющимися
-        public async Task<string> UploadFileAsync(UploadFileModel model, IFormFile file)
+        public async Task<Guid> UploadFileAsync(UploadFileModel model, IFormFile file)
         {
             var fileEntity = _mapper.Map<File>(model);
             var path = $"..\\Files\\File\\{Guid.NewGuid()}.{file.FileName.Split('.').Last()}";
             fileEntity.Name = file.FileName;
-            fileEntity.Uri = $"https://SecretsShare/File/id={file.GetHashCode()}";
             fileEntity.Path = path;
             using (var fileStream = new FileStream(path, FileMode.Create))
             {
@@ -39,36 +38,27 @@ namespace SecretsShare.Managers.Managers
             }
     
             var id = await _filesRepository.AddAsync(fileEntity);
-            return fileEntity.Uri;
+            return id;
         }
 
-        public async Task<string> UploadTextFile(UploadFileModel model, UploadTextModel text)
+        public async Task<Guid> UploadTextFile(UploadFileModel model, UploadTextModel text)
         {
             var fileEntity = _mapper.Map<File>(model);
             var unique = Guid.NewGuid();
             var fileInfo = new FileInfo($"..\\Files\\TextFile\\{unique}.txt");
             fileEntity.Name = text.Name;
-            fileEntity.Uri = $"https://SecretsShare/File/id={unique}";
-            fileEntity.Path = fileInfo.FullName;
+            fileEntity.Path = fileInfo.Name;
             using (StreamWriter sw = fileInfo.CreateText())
             {
                 await sw.WriteAsync(text.Text);
             }
 
             var id = await _filesRepository.AddAsync(fileEntity);
-            return fileEntity.Uri;
+            return id;
         }
 
-        public TextFileResponse ViewTextFile(string uri)
+        public TextFileResponse ViewTextFile(File file)
         {
-            var file = _filesRepository.GetByUrlOrDefault(uri);
-            if (file is null)
-                return null;
-            if (file.Cascade)
-            {
-                _filesRepository.OnCascadeDelete(file);
-                System.IO.File.Delete(file.Path);
-            }
             using (StreamReader reader = new StreamReader(file.Path))
             {
                 var fileResponse = new TextFileResponse()
@@ -76,6 +66,11 @@ namespace SecretsShare.Managers.Managers
                     Name = file.Name,
                     Text = reader.ReadToEnd()
                 };
+                if (file.Cascade)
+                {
+                    _filesRepository.OnCascadeDelete(file);
+                    System.IO.File.Delete(file.Path);
+                }
                 return fileResponse;
             }
         }
@@ -95,9 +90,9 @@ namespace SecretsShare.Managers.Managers
             return file;
         }
 
-        public async Task<SuccessResponse> UpdateCascade(string uri)
+        public async Task<SuccessResponse> UpdateCascade(Guid fileId)
         {
-            var file = _filesRepository.GetByUrlOrDefault(uri);
+            var file = _filesRepository.GetById(fileId);
             if (file is null)
                 return new SuccessResponse(false);
             file.Cascade = !file.Cascade;
@@ -105,9 +100,9 @@ namespace SecretsShare.Managers.Managers
             return new SuccessResponse(file.Id == id);
         }
 
-        public SuccessResponse DeleteFile(string uri)
+        public SuccessResponse DeleteFile(Guid id)
         {
-            var file = _filesRepository.GetByUrlOrDefault(uri);
+            var file = _filesRepository.GetById(id);
             if (file is null)
                 return new SuccessResponse(false);
             _filesRepository.DeleteFile(file);

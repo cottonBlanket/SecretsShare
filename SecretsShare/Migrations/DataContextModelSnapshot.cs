@@ -37,9 +37,6 @@ namespace SecretsShare.Migrations
                     b.Property<string>("Path")
                         .HasColumnType("text");
 
-                    b.Property<string>("Uri")
-                        .HasColumnType("text");
-
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
 
