@@ -28,6 +28,8 @@ namespace SecretsShare.Managers.Managers
             _configuration = configuration;
             _mapper = mapper;
         }
+
+        public User GetById(Guid id) => _userRepository.GetById(id);
         
         public AuthenticateResponse Authenticate(AuthModel model)
         {

@@ -13,5 +13,6 @@ namespace SecretsShare.Managers.ManagersInterfaces
         public Task<AuthenticateResponse> Register(AuthModel userModel);
         public Task<AuthenticateResponse> UpdateTokensAsync(Guid userId, string refreshToken);
         public List<File> GetAllUserFiles(Guid userId);
+        public User GetById(Guid id);
     }
 }

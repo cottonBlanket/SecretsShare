@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.OpenApi.Models;
 using SecretsShare.Managers.Managers;
 using SecretsShare.Managers.ManagersInterfaces;
+using SecretsShare.Middlewares;
 using SecretsShare.Profiles;
 using SecretsShare.Repositories.Interfaces;
 using SecretsShare.Repositories.Repositories;
@@ -75,6 +76,7 @@ namespace SecretsShare
             //app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseMiddleware<JwtMiddleware>();
             app.UseMiddleware<FileDownload>();
 
             app.UseAuthorization();

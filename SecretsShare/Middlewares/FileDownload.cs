@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.FileProviders;
 using SecretsShare.Managers.ManagersInterfaces;
 
-namespace SecretsShare
+namespace SecretsShare.Middlewares
 {
     public class FileDownload
     {
