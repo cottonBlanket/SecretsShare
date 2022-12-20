@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
@@ -39,7 +40,17 @@ namespace SecretsShare.Middlewares
                 else if(file is {FileType: "TextFile"})
                 {
                     var text = filesManager.ViewTextFile(file);
-                    await context.Response.WriteAsync($"{text.Name}\n{text.Text}");
+                    var response = new StringBuilder();
+                    response.Append($"<h1 style=\"text-align:center;\">{text.Name}</h1>");
+                    response.Append($"<p style=\"width:1170px;margin-right: 30px;margin-left:30px;\">{text.Text}</p>");
+                    context.Response.Headers.Add("Content-Type", "text/html charset=utf-8");
+                    System.Net.Mime.ContentDisposition cd = new System.Net.Mime.ContentDisposition
+                    {
+                        FileName = file.Name,
+                        Inline = true
+                    };
+                    context.Response.Headers.Add("Content-Disposition", cd.ToString());
+                    await context.Response.WriteAsync(response.ToString());
                 }
                 else
                     await context.Response.WriteAsync("File not found");

@@ -5,13 +5,17 @@
     <projectFile profileName="SecretsShare">SecretsShare.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="">
+    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="Revision of the authorization logic">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/FilesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/FilesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileDownload.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/FileDownload.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/Managers/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/Managers/UserManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Managers/ManagersInterfaces/IUserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/ManagersInterfaces/IUserManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Middlewares/FileDownload.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/FileDownload.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +102,7 @@
       <workItem from="1671307139113" duration="5055000" />
       <workItem from="1671350557604" duration="2038000" />
       <workItem from="1671416184263" duration="12174000" />
-      <workItem from="1671514015171" duration="13798000" />
+      <workItem from="1671514015171" duration="15487000" />
     </task>
     <task id="LOCAL-00001" summary="Starting project structure">
       <created>1671134293006</created>
@@ -240,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671529458240</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Revision of the authorization logic">
+      <created>1671573933417</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1671573933417</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +292,8 @@
     <MESSAGE value="File deletion added" />
     <MESSAGE value="added middleware for processing a file download request" />
     <MESSAGE value="Update database, Update on text file output" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update database, Update on text file output" />
+    <MESSAGE value="Revision of the authorization logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revision of the authorization logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -304,10 +316,10 @@
           <line>22</line>
           <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\FileDownload.cs" initialLine="16" containingFunctionPresentation="method 'InvokeAsync'">
             <startOffsets>
-              <option value="597" />
+              <option value="616" />
             </startOffsets>
             <endOffsets>
-              <option value="598" />
+              <option value="617" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />
@@ -317,10 +329,10 @@
           <line>38</line>
           <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\FileDownload.cs" initialLine="38" containingFunctionPresentation="method 'Invoke'">
             <startOffsets>
-              <option value="1326" />
+              <option value="1345" />
             </startOffsets>
             <endOffsets>
-              <option value="1360" />
+              <option value="1379" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="15" />
@@ -330,10 +342,10 @@
           <line>28</line>
           <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\FileDownload.cs" initialLine="28" containingFunctionPresentation="method 'Invoke'">
             <startOffsets>
-              <option value="826" />
+              <option value="845" />
             </startOffsets>
             <endOffsets>
-              <option value="859" />
+              <option value="878" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="16" />
