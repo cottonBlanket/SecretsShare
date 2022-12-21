@@ -5,16 +5,15 @@
     <projectFile profileName="SecretsShare">SecretsShare.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="Added viewing of a text file as an html page">
+    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="Improvements to working with files">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/FilesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/FilesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Managers/Managers/FilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/Managers/FilesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/ManagersInterfaces/IFilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/ManagersInterfaces/IFilesManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Middlewares/FileDownload.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Middlewares/FileDownload.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Models/UploadModels.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/UploadModels.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Profiles/FileProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Profiles/FileProfile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repositories/Interfaces/IFilesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Interfaces/IFilesRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Repositories/Repositories/FilesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Repositories/Repositories/FilesRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.dll" afterDir="false" />
@@ -48,6 +47,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b41958e558efd7597af0cbe75b2f1a77ee2de5c6ff253af2ecf54fbc83a77/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce9b239e7dafd811d27c34554a1e62236943314158687cb4cae1746476f942a/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e2983f92253cabdc34032bbbabceaa9094e262a962d43db2c8a1d03d279287/PathString.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Middlewares/FileDownload.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Middlewares/FileDownload.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -114,7 +114,7 @@
       <workItem from="1671307139113" duration="5055000" />
       <workItem from="1671350557604" duration="2038000" />
       <workItem from="1671416184263" duration="12174000" />
-      <workItem from="1671514015171" duration="17871000" />
+      <workItem from="1671514015171" duration="26451000" />
     </task>
     <task id="LOCAL-00001" summary="Starting project structure">
       <created>1671134293006</created>
@@ -270,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671579103953</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Improvements to working with files">
+      <created>1671581416253</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1671581416253</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +320,8 @@
     <MESSAGE value="Update database, Update on text file output" />
     <MESSAGE value="Revision of the authorization logic" />
     <MESSAGE value="Added viewing of a text file as an html page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added viewing of a text file as an html page" />
+    <MESSAGE value="Improvements to working with files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvements to working with files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -358,30 +366,17 @@
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Middlewares/FileDownload.cs</url>
-          <line>29</line>
-          <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Middlewares\FileDownload.cs" initialLine="29" containingFunctionPresentation="method 'Invoke'">
+          <url>file://$PROJECT_DIR$/Controllers/FilesController.cs</url>
+          <line>60</line>
+          <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Controllers\FilesController.cs" initialLine="58" containingFunctionPresentation="method 'DownloadFile'">
             <startOffsets>
-              <option value="845" />
+              <option value="1846" />
             </startOffsets>
             <endOffsets>
-              <option value="878" />
+              <option value="1847" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Middlewares/FileDownload.cs</url>
-          <line>23</line>
-          <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Middlewares\FileDownload.cs" initialLine="23" containingFunctionPresentation="method 'Invoke'">
-            <startOffsets>
-              <option value="616" />
-            </startOffsets>
-            <endOffsets>
-              <option value="617" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="18" />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

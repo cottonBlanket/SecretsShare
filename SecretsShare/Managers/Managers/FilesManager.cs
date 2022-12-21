@@ -59,38 +59,38 @@ namespace SecretsShare.Managers.Managers
             return id;
         }
 
-        public TextFileResponse ViewTextFile(File file)
+        public void CascadeDelete(File file)
         {
-            using (StreamReader reader = new StreamReader(file.Path))
+            if (file.Cascade)
             {
-                var fileResponse = new TextFileResponse()
-                {
-                    Name = file.Name,
-                    Text = reader.ReadToEnd()
-                };
-                if (file.Cascade)
-                {
-                    _filesRepository.OnCascadeDelete(file);
-                    //System.IO.File.Delete(file.Path);
-                }
-                return fileResponse;
+                _filesRepository.DeleteFile(file);
+                // using (var stream = System.IO.File.Delete())
+                // {
+                //     
+                // }
+                System.IO.File.Delete(file.Path);
             }
         }
 
-        public File GetFile(string id)
-        {
-            //обработать исключение с noconntent
-            var file = _filesRepository.GetById(Guid.Parse(id));
-            if (file is null)
-                return null;
-            if (file.Cascade && file.FileType != "TextFile")
-            {
-                _filesRepository.OnCascadeDelete(file);
-                System.IO.File.Delete(file.Path);
-            }
-                
-            return file;
-        }
+        // public TextFileResponse ViewTextFile(File file)
+        // {
+        //     using (StreamReader reader = new StreamReader(file.Path))
+        //     {
+        //         var fileResponse = new TextFileResponse()
+        //         {
+        //             Name = file.Name,
+        //             Text = reader.ReadToEnd()
+        //         };
+        //         if (file.Cascade)
+        //         {
+        //             _filesRepository.OnCascadeDelete(file);
+        //             //System.IO.File.Delete(file.Path);
+        //         }
+        //         return fileResponse;
+        //     }
+        // }
+
+        public File GetFile(string id) => _filesRepository.GetById(Guid.Parse(id));
 
         public async Task<SuccessResponse> UpdateCascade(Guid fileId)
         {

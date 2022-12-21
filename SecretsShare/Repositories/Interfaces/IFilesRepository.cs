@@ -9,7 +9,6 @@ namespace SecretsShare.Repositories.Interfaces
 {
     public interface IFilesRepository: IEfRepository<File>
     {
-        public Task OnCascadeDelete(File file);
         public Task DeleteFile(File file);
     }
 }

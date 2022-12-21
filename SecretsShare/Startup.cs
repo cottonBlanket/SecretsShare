@@ -77,7 +77,7 @@ namespace SecretsShare
 
             app.UseRouting();
             app.UseMiddleware<JwtMiddleware>();
-            app.UseMiddleware<FileDownload>();
+            //app.UseMiddleware<FileDownload>();
 
             app.UseAuthorization();
 
