@@ -21,7 +21,7 @@ namespace SecretsShare.Controllers
             _filesManager = filesManager;
         }
         
-        [Authorize]
+        //[Authorize]
         [HttpPost("upload")]
         public async Task<IActionResult> UploadFile([FromQuery]UploadFileModel model, IFormFile file)
         {

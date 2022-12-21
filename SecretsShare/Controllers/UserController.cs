@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SecretsShare.Attributes;
 using SecretsShare.Models;
 using SecretsShare.Managers.ManagersInterfaces;
 
@@ -64,6 +65,7 @@ namespace SecretsShare.Controllers
             }
         }
 
+        [Authorize]
         [HttpGet("all")]
         public IActionResult GetAllMyFiles([FromQuery] Guid userId)
         {

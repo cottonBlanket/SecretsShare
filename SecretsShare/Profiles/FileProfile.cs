@@ -10,14 +10,12 @@ namespace SecretsShare.Profiles
         public FileProfile()
         {
             CreateMap<UploadFileModel, File>()
-                .ForMember(dst => dst.UserId, 
+                .ForMember(dst => dst.UserId,
                     opt => opt.MapFrom(src => src.UserId))
-                .ForMember(dst => dst.Cascade, 
+                .ForMember(dst => dst.Cascade,
                     opt => opt.MapFrom(src => src.Cascade))
-                .ForMember(dst => dst.Id, 
-                    opt => opt.Ignore())
-                .ForMember(dst => dst.FileType,
-                    opt => opt.MapFrom(src => src.FileType));
+                .ForMember(dst => dst.Id,
+                    opt => opt.Ignore());
 
         }
     }

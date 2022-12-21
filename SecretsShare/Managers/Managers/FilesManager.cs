@@ -32,6 +32,7 @@ namespace SecretsShare.Managers.Managers
             var path = $"..\\Files\\File\\{Guid.NewGuid()}.{file.FileName.Split('.').Last()}";
             fileEntity.Name = file.FileName;
             fileEntity.Path = path;
+            fileEntity.FileType = "File";
             using (var fileStream = new FileStream(path, FileMode.Create))
             {
                 file.CopyTo(fileStream);
@@ -47,7 +48,8 @@ namespace SecretsShare.Managers.Managers
             var unique = Guid.NewGuid();
             var fileInfo = new FileInfo($"..\\Files\\TextFile\\{unique}.txt");
             fileEntity.Name = text.Name;
-            fileEntity.Path = fileInfo.Name;
+            fileEntity.Path = $"..\\Files\\TextFile\\{fileInfo.Name}";
+            fileEntity.FileType = "TextFile";
             using (StreamWriter sw = fileInfo.CreateText())
             {
                 await sw.WriteAsync(text.Text);
@@ -69,7 +71,7 @@ namespace SecretsShare.Managers.Managers
                 if (file.Cascade)
                 {
                     _filesRepository.OnCascadeDelete(file);
-                    System.IO.File.Delete(file.Path);
+                    //System.IO.File.Delete(file.Path);
                 }
                 return fileResponse;
             }
@@ -81,7 +83,7 @@ namespace SecretsShare.Managers.Managers
             var file = _filesRepository.GetById(Guid.Parse(id));
             if (file is null)
                 return null;
-            if (file.Cascade)
+            if (file.Cascade && file.FileType != "TextFile")
             {
                 _filesRepository.OnCascadeDelete(file);
                 System.IO.File.Delete(file.Path);

@@ -40,14 +40,16 @@ namespace SecretsShare.Repositories.Repositories
             return entity.Id;
         }
 
-        public void OnCascadeDelete(File file)
-        {
-            _context.Set<File>().Remove(file);
-        }
-
-        public void DeleteFile(File file)
+        public async Task OnCascadeDelete(File file)
         {
             _context.Files.Remove(file);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteFile(File file)
+        {
+            _context.Files.Remove(file);
+            await _context.SaveChangesAsync();
         }
     }
 }

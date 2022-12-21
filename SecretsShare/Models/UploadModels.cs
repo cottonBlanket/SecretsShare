@@ -7,8 +7,6 @@ namespace SecretsShare.Models
     {
         public Guid UserId { get; set; }
         public bool Cascade { get; set; }
-        
-        public string FileType { get; set; }
     }
 
     public class UploadTextModel

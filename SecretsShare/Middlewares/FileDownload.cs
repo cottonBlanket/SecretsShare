@@ -37,7 +37,7 @@ namespace SecretsShare.Middlewares
                     context.Response.Headers.Add("Content-Disposition", cd.ToString());
                     await context.Response.SendFileAsync(file.Path, CancellationToken.None);
                 }
-                else if(file is {FileType: "TextFile"})
+                else if (file is { FileType: "TextFile" })
                 {
                     var text = filesManager.ViewTextFile(file);
                     var response = new StringBuilder();
@@ -53,7 +53,7 @@ namespace SecretsShare.Middlewares
                     await context.Response.WriteAsync(response.ToString());
                 }
                 else
-                    await context.Response.WriteAsync("File not found");
+                    context.Response.StatusCode = 404;
             }
             await _next(context);
         }
