@@ -10,17 +10,37 @@ using SecretsShare.Managers.ManagersInterfaces;
 
 namespace SecretsShare.Middlewares
 {
+    /// <summary>
+    /// request processing pipeline class
+    /// </summary>
     public class JwtMiddleware
     {
+        /// <summary>
+        /// function to call the next pipeline component
+        /// </summary>
         private readonly RequestDelegate _next;
+        
+        /// <summary>
+        /// application configuration
+        /// </summary>
         private readonly IConfiguration _configuration;
     
+        /// <summary>
+        /// class constructor receiving delegate and configuration
+        /// </summary>
+        /// <param name="next">the next component of the pipeline</param>
+        /// <param name="configuration">application configuration</param>
         public JwtMiddleware(RequestDelegate next, IConfiguration configuration)
         {
             _next = next;
             _configuration = configuration;
         }
 
+        /// <summary>
+        /// gets their authorization token request headers and checks it for validity
+        /// </summary>
+        /// <param name="context">request context</param>
+        /// <param name="userManager">service for working with user entities</param>
         public async Task Invoke(HttpContext context, IUserManager userManager)
         {
             var token1 = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ");
@@ -32,6 +52,12 @@ namespace SecretsShare.Middlewares
             await _next(context);
         }
         
+        /// <summary>
+        /// adds the "user" header to the response context if the authorization token is valid
+        /// </summary>
+        /// <param name="context">request context</param>
+        /// <param name="userManager">service for working with user entities</param>
+        /// <param name="token">jwt token</param>
         public void AttachUserToContext(HttpContext context, IUserManager userManager, string token)
         {
             try

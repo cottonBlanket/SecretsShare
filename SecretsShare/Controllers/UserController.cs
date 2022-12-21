@@ -9,17 +9,32 @@ using SecretsShare.Managers.ManagersInterfaces;
 
 namespace SecretsShare.Controllers
 {
+    /// <summary>
+    /// controller for routing requests related to users
+    /// </summary>
     [ApiController]
     [Route("api/user")]
     public class UserController: ControllerBase
     {
+        /// <summary>
+        /// abstraction of an object for working with users
+        /// </summary>
         private readonly IUserManager _userManager;
 
+        /// <summary>
+        /// initializes the user's controller
+        /// </summary>
+        /// <param name="userManager">service for working with users</param>
         public UserController(IUserManager userManager)
         {
             _userManager = userManager;
         }
         
+        /// <summary>
+        /// processes a request to register a new user
+        /// </summary>
+        /// <param name="model">the model of information about the registered user</param>
+        /// <returns>Authorized User's object</returns>
         [HttpPost("register")]
         public async Task<IActionResult> Register(AuthModel model)
         {
@@ -34,6 +49,11 @@ namespace SecretsShare.Controllers
             return Ok(response);
         }
         
+        /// <summary>
+        /// Processes the authentication request
+        /// </summary>
+        /// <param name="model">user model for authorization</param>
+        /// <returns>Authorized User's object</returns>
         [HttpPost("signin")]
         public IActionResult Authenticate(AuthModel model)
         {
@@ -47,6 +67,12 @@ namespace SecretsShare.Controllers
             return Ok(response);
         }
         
+        /// <summary>
+        /// processes a request to update the user's refresh token if it has expired
+        /// </summary>
+        /// <param name="userId">unique identifier of the user</param>
+        /// <param name="refreshToken">outdated token</param>
+        /// <returns>new authorized user object</returns>
         [HttpPut("refresh")]
         public async Task<IActionResult> UpdateRefreshToken([FromQuery]Guid userId, [FromQuery]string refreshToken)
         {
@@ -64,9 +90,14 @@ namespace SecretsShare.Controllers
                 return NoContent();
             }
         }
-
+        
+        /// <summary>
+        /// processes a request to receive all files of an authorized user
+        /// </summary>
+        /// <param name="userId">unique identifier of the user</param>
+        /// <returns>list of all files uploaded by the user</returns>
         [Authorize]
-        [HttpGet("all")]
+        [HttpGet("getAllFiles")]
         public IActionResult GetAllMyFiles([FromQuery] Guid userId)
         {
             var files = _userManager.GetAllUserFiles(userId);

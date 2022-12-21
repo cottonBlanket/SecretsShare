@@ -15,17 +15,38 @@ using File = SecretsShare.DTO.File;
 
 namespace SecretsShare.Managers.Managers
 {
+    /// <summary>
+    /// a class for executing query logic related to files
+    /// </summary>
     public class FilesManager: IFilesManager
     {
+        /// <summary>
+        /// abstraction of an object for executing database queries to a file's table
+        /// </summary>
         private readonly IFilesRepository _filesRepository;
+        
+        /// <summary>
+        /// abstraction of an object that maps an object of one type into an object of another type
+        /// </summary>
         private readonly IMapper _mapper;
 
+        /// <summary>
+        /// initializes the file service class
+        /// </summary>
+        /// <param name="filesRepository">service for working with a database of files</param>
+        /// <param name="mapper">mapping service</param>
         public FilesManager(IFilesRepository filesRepository, IMapper mapper)
         {
             _filesRepository = filesRepository;
             _mapper = mapper;
         }
-        //доработать проблему с именами повторяющимися
+        
+        /// <summary>
+        /// creates the entity of the file uploaded by the user
+        /// </summary>
+        /// <param name="model">file information model</param>
+        /// <param name="file">загруженный файл</param>
+        /// <returns>unique identifier of the created entity</returns>
         public async Task<Guid> UploadFileAsync(UploadFileModel model, IFormFile file)
         {
             var fileEntity = _mapper.Map<File>(model);
@@ -42,6 +63,12 @@ namespace SecretsShare.Managers.Managers
             return id;
         }
 
+        /// <summary>
+        /// creates an entity for the text uploaded by the user
+        /// </summary>
+        /// <param name="model">the model of information about the uploaded text</param>
+        /// <param name="text">model of the uploaded text</param>
+        /// <returns>unique identifier of the created entity</returns>
         public async Task<Guid> UploadTextFile(UploadFileModel model, UploadTextModel text)
         {
             var fileEntity = _mapper.Map<File>(model);
@@ -59,39 +86,32 @@ namespace SecretsShare.Managers.Managers
             return id;
         }
 
+        /// <summary>
+        /// deletes a file if the user specified its automatic deletion upon receipt
+        /// </summary>
+        /// <param name="file">the entity of the file</param>
         public void CascadeDelete(File file)
         {
             if (file.Cascade)
             {
                 _filesRepository.DeleteFile(file);
-                // using (var stream = System.IO.File.Delete())
-                // {
-                //     
-                // }
-                System.IO.File.Delete(file.Path);
+                //System.IO.File.Delete(file.Path);
+                //it was not possible to implement a complete removal from the error of multi-user access to the file
             }
         }
 
-        // public TextFileResponse ViewTextFile(File file)
-        // {
-        //     using (StreamReader reader = new StreamReader(file.Path))
-        //     {
-        //         var fileResponse = new TextFileResponse()
-        //         {
-        //             Name = file.Name,
-        //             Text = reader.ReadToEnd()
-        //         };
-        //         if (file.Cascade)
-        //         {
-        //             _filesRepository.OnCascadeDelete(file);
-        //             //System.IO.File.Delete(file.Path);
-        //         }
-        //         return fileResponse;
-        //     }
-        // }
-
+        /// <summary>
+        /// returns a file by its unique identifier
+        /// </summary>
+        /// <param name="id">unique identifier</param>
+        /// <returns>the entity of the file</returns>
         public File GetFile(string id) => _filesRepository.GetById(Guid.Parse(id));
 
+        /// <summary>
+        /// sets the opposite value for the value that determines whether to delete the file after accessing it
+        /// </summary>
+        /// <param name="fileId">unique identifier of the file entity</param>
+        /// <returns>response to the update</returns>
         public async Task<SuccessResponse> UpdateCascade(Guid fileId)
         {
             var file = _filesRepository.GetById(fileId);
@@ -102,6 +122,11 @@ namespace SecretsShare.Managers.Managers
             return new SuccessResponse(file.Id == id);
         }
 
+        /// <summary>
+        /// deletes a file
+        /// </summary>
+        /// <param name="id">unique identifier of the file entity</param>
+        /// <returns>response to the deletion request</returns>
         public SuccessResponse DeleteFile(Guid id)
         {
             var file = _filesRepository.GetById(id);

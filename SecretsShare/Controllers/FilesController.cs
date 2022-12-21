@@ -12,25 +12,41 @@ using File = SecretsShare.DTO.File;
 
 namespace SecretsShare.Controllers
 {
+    /// <summary>
+    /// controller for routing requests related to files
+    /// </summary>
     [ApiController]
     [Route("api/files")]
     public class FilesController: ControllerBase
     {
+        /// <summary>
+        /// abstraction of an object for working with files
+        /// </summary>
         private readonly IFilesManager _filesManager;
 
+        /// <summary>
+        /// initializes the file controller
+        /// </summary>
+        /// <param name="filesManager">service for working with files</param>
         public FilesController(IFilesManager filesManager)
         {
             _filesManager = filesManager;
         }
         
-        //[Authorize]
+        /// <summary>
+        /// method of processing the file upload path
+        /// </summary>
+        /// <param name="model">the model of information about the uploaded file</param>
+        /// <param name="file">uploadable file</param>
+        /// <returns>the uri by which the downloaded file can be uploaded</returns>
+        [Authorize]
         [HttpPost("upload")]
         public async Task<IActionResult> UploadFile([FromQuery]UploadFileModel model, IFormFile file)
         {
             try
             {
                 var id = await _filesManager.UploadFileAsync(model, file);
-                var uri = new Uri($"{Request.Scheme}://{Request.Host}/id={id}");
+                var uri = new Uri($"{Request.Scheme}://{Request.Host}/api/files/id={id}");
                 return Ok(uri);
             }
             catch (Exception e)
@@ -40,6 +56,12 @@ namespace SecretsShare.Controllers
             
         }
         
+        /// <summary>
+        /// method of processing the text loading path
+        /// </summary>
+        /// <param name="model">the model of information about the uploaded text</param>
+        /// <param name="text">the model of the uploaded text</param>
+        /// <returns>the uri with which the uploaded text can be viewed</returns>
         [Authorize]
         [HttpPost("uploadText")]
         public async Task<IActionResult> UploadText([FromQuery] UploadFileModel model, [FromBody] UploadTextModel text)
@@ -56,6 +78,11 @@ namespace SecretsShare.Controllers
             }
         }
 
+        /// <summary>
+        /// a method for processing the path for uploading a file or viewing the uploaded text
+        /// </summary>
+        /// <param name="id">unique identifier of the uploaded data</param>
+        /// <returns>File or html page for viewing text</returns>
         [HttpGet("id={id}")]
         public async Task<IActionResult> DownloadFile(string id)
         {
@@ -76,13 +103,19 @@ namespace SecretsShare.Controllers
             {
                 var fileType="application/octet-stream";
                 var fileStream = new FileStream(file.Path, FileMode.Open);
+                _filesManager.CascadeDelete(file);//deleting only from the database!!!
                 return File(fileStream, fileType, file.Name);
             }
 
             return NoContent();
         }
-
-        //[Authorize]
+        
+        /// <summary>
+        /// updates the value for the file to delete the file when it is received or not
+        /// </summary>
+        /// <param name="id">unique identifier of the uploaded data</param>
+        /// <returns>status response code of the file update request</returns>
+        [Authorize]
         [HttpPut("update")]
         public async Task<IActionResult> UpdateFileCascadeDelete(Guid id)
         {
@@ -92,6 +125,11 @@ namespace SecretsShare.Controllers
             return BadRequest();
         }
         
+        /// <summary>
+        /// deletes a file
+        /// </summary>
+        /// <param name="id">unique identifier of the uploaded data</param>
+        /// <returns>status response code of the file deletion request</returns>
         //[Authorize]
         [HttpDelete("delete")]
         public IActionResult DeleteFile(Guid id)

@@ -5,8 +5,15 @@ using SecretsShare.Models;
 
 namespace SecretsShare.Profiles
 {
+    /// <summary>
+    /// mapping class of objects containing information about the file
+    /// </summary>
     public class FileProfile: Profile
     {
+        /// <summary>
+        /// converts an object of one type of object containing information about a file
+        /// into an object of another type containing information about a file
+        /// </summary>
         public FileProfile()
         {
             CreateMap<UploadFileModel, File>()

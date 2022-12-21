@@ -73,11 +73,10 @@ namespace SecretsShare
             }
 
             app.UseHttpsRedirection();
-            //app.UseStaticFiles();
+            app.UseStaticFiles();
 
             app.UseRouting();
             app.UseMiddleware<JwtMiddleware>();
-            //app.UseMiddleware<FileDownload>();
 
             app.UseAuthorization();
 
