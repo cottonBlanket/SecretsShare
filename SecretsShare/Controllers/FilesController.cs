@@ -83,8 +83,8 @@ namespace SecretsShare.Controllers
         /// </summary>
         /// <param name="id">unique identifier of the uploaded data</param>
         /// <returns>File or html page for viewing text</returns>
-        [HttpGet("id={id}")]
-        public async Task<IActionResult> DownloadFile(string id)
+        [HttpGet("id={id:guid}")]
+        public async Task<IActionResult> DownloadFile(Guid id)
         {
             var file = _filesManager.GetFile(id);
             if (file == null)

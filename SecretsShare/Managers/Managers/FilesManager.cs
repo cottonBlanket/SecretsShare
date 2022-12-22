@@ -105,7 +105,7 @@ namespace SecretsShare.Managers.Managers
         /// </summary>
         /// <param name="id">unique identifier</param>
         /// <returns>the entity of the file</returns>
-        public File GetFile(string id) => _filesRepository.GetById(Guid.Parse(id));
+        public File GetFile(Guid id) => _filesRepository.GetById(id);
 
         /// <summary>
         /// sets the opposite value for the value that determines whether to delete the file after accessing it

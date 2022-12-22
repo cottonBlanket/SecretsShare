@@ -39,7 +39,7 @@ namespace SecretsShare.Managers.ManagersInterfaces
         /// </summary>
         /// <param name="id">unique identifier</param>
         /// <returns>the entity of the file</returns>
-        public File GetFile(string id);
+        public File GetFile(Guid id);
         
         /// <summary>
         /// sets the opposite value for the value that determines whether to delete the file after accessing it
