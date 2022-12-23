@@ -39,7 +39,7 @@ namespace SecretsShare.Controllers
         /// <param name="model">the model of information about the uploaded file</param>
         /// <param name="file">uploadable file</param>
         /// <returns>the uri by which the downloaded file can be uploaded</returns>
-        [Authorize]
+        //[Authorize]
         [HttpPost("upload")]
         public async Task<IActionResult> UploadFile([FromQuery]UploadFileModel model, IFormFile file)
         {
@@ -89,6 +89,7 @@ namespace SecretsShare.Controllers
             var file = _filesManager.GetFile(id);
             if (file == null)
                 return NotFound();
+            Response.Headers.Append("IsDownload", "true");
             if (file.FileType == "TextFile")
             {
                 using var reader = new StreamReader(file.Path);
@@ -103,7 +104,7 @@ namespace SecretsShare.Controllers
             {
                 var fileType="application/octet-stream";
                 var fileStream = new FileStream(file.Path, FileMode.Open);
-                _filesManager.CascadeDelete(file);//deleting only from the database!!!
+                //_filesManager.CascadeDelete(file);//deleting only from the database!!!
                 return File(fileStream, fileType, file.Name);
             }
 

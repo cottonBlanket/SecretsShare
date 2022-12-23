@@ -95,7 +95,7 @@ namespace SecretsShare.Managers.Managers
             if (file.Cascade)
             {
                 _filesRepository.DeleteFile(file);
-                //System.IO.File.Delete(file.Path);
+                System.IO.File.Delete(file.Path);
                 //it was not possible to implement a complete removal from the error of multi-user access to the file
             }
         }

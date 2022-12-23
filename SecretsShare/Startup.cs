@@ -77,6 +77,7 @@ namespace SecretsShare
 
             app.UseRouting();
             app.UseMiddleware<JwtMiddleware>();
+            app.UseMiddleware<Deleter>();
 
             app.UseAuthorization();
 

@@ -5,7 +5,19 @@
     <projectFile profileName="SecretsShare">SecretsShare.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="" />
+    <list default="true" id="9310d757-c34e-43c2-8bf0-15599e12a835" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SecretsShare.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/FilesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/FilesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Managers/Managers/FilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Managers/Managers/FilesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/net5.0/SecretsShare.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/SecretsShare.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/ref/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/ref/SecretsShare.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net5.0/refint/SecretsShare.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net5.0/refint/SecretsShare.dll" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,14 +35,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/58db1ab3219d077184369b75bce948ee936be22c4a552a889fd6695cb9db189/MapExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/63eeb686d29c5185613f43b3dd2541726df298e9c2c89fe61addc96a91a52/IFileInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f572a3da9741413e354aa7410d360b6e3b03df99098df54d41d482cdfff67b8/DbContextOptionsBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/72e3638a478fbc7da95baa5fbc1fd1c638eb4cb0d960eb70c93fb1fcddbd5a7e/SwaggerMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/87c8f0a2b3113ed8ac865048fe1e32205e9f44b1be45f83f62fe6fdd443dcb3/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9e325937c7b5397e4f34a9dd155c84aad8a6231927a9ead6d2d8de893fbee6/AsyncValueTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/afdb9066c2224c2ca693b338c57624786b5a84c757a9c562c9a61297c6e/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b41958e558efd7597af0cbe75b2f1a77ee2de5c6ff253af2ecf54fbc83a77/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce9b239e7dafd811d27c34554a1e62236943314158687cb4cae1746476f942a/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e2983f92253cabdc34032bbbabceaa9094e262a962d43db2c8a1d03d279287/PathString.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Middlewares/FileDownload.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Middlewares/FileDownload.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/danil/Documents/GitHub/SecretsShare/SecretsShare/Middlewares/FileDownload.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -97,6 +108,8 @@
       <workItem from="1671350557604" duration="2038000" />
       <workItem from="1671416184263" duration="12174000" />
       <workItem from="1671514015171" duration="38309000" />
+      <workItem from="1671675006186" duration="2420000" />
+      <workItem from="1671777250267" duration="1519000" />
     </task>
     <task id="LOCAL-00001" summary="Starting project structure">
       <created>1671134293006</created>
@@ -273,7 +286,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671614790100</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added test files">
+      <created>1671675065882</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1671675065882</updated>
+    </task>
+    <task id="LOCAL-00027" summary="changed the file receiving route">
+      <created>1671676781440</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1671676781440</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,8 +321,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Starting project structure" />
-    <MESSAGE value="Registered the DataContext class" />
     <MESSAGE value="Added registration and authentication methods" />
     <MESSAGE value="Added user service files" />
     <MESSAGE value="Added file maintenance files" />
@@ -319,7 +344,9 @@
     <MESSAGE value="Improvements to working with files" />
     <MESSAGE value="Update of sending files" />
     <MESSAGE value="I wrote the auto documentation and tested the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="I wrote the auto documentation and tested the project" />
+    <MESSAGE value="added test files" />
+    <MESSAGE value="changed the file receiving route" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the file receiving route" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -327,54 +354,33 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Middlewares/FileDownload.cs</url>
           <line>22</line>
-          <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\FileDownload.cs" initialLine="16" containingFunctionPresentation="method 'InvokeAsync'">
-            <startOffsets>
-              <option value="616" />
-            </startOffsets>
-            <endOffsets>
-              <option value="617" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\FileDownload.cs" initialLine="16" containingFunctionPresentation="method 'InvokeAsync'" />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Middlewares/FileDownload.cs</url>
           <line>38</line>
-          <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\FileDownload.cs" initialLine="38" containingFunctionPresentation="method 'Invoke'">
-            <startOffsets>
-              <option value="1345" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1382" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\FileDownload.cs" initialLine="38" containingFunctionPresentation="method 'Invoke'" />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Middlewares/FileDownload.cs</url>
           <line>28</line>
-          <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\FileDownload.cs" initialLine="28" containingFunctionPresentation="method 'Invoke'">
-            <startOffsets>
-              <option value="845" />
-            </startOffsets>
-            <endOffsets>
-              <option value="878" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\FileDownload.cs" initialLine="28" containingFunctionPresentation="method 'Invoke'" />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Controllers/FilesController.cs</url>
-          <line>87</line>
-          <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Controllers\FilesController.cs" initialLine="58" containingFunctionPresentation="method 'DownloadFile'">
+          <url>file://$PROJECT_DIR$/Middlewares/Deleter.cs</url>
+          <line>18</line>
+          <properties documentPath="C:\Users\danil\Documents\GitHub\SecretsShare\SecretsShare\Middlewares\Deleter.cs" initialLine="16" containingFunctionPresentation="method 'Invoke'">
             <startOffsets>
-              <option value="3170" />
+              <option value="448" />
             </startOffsets>
             <endOffsets>
-              <option value="3171" />
+              <option value="449" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="19" />
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
