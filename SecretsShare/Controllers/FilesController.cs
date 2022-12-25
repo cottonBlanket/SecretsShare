@@ -131,7 +131,7 @@ namespace SecretsShare.Controllers
         /// </summary>
         /// <param name="id">unique identifier of the uploaded data</param>
         /// <returns>status response code of the file deletion request</returns>
-        //[Authorize]
+        [Authorize]
         [HttpDelete("delete")]
         public IActionResult DeleteFile(Guid id)
         {
