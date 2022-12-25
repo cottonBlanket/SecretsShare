@@ -81,7 +81,7 @@ namespace SecretsShare.Controllers
         /// <summary>
         /// a method for processing the path for uploading a file or viewing the uploaded text
         /// </summary>
-        /// <param name="id">unique identifier of the uploaded data</param>
+        /// <param name="id">unique identifier of the downloaded data</param>
         /// <returns>File or html page for viewing text</returns>
         [HttpGet("id={id:guid}")]
         public async Task<IActionResult> DownloadFile(Guid id)
